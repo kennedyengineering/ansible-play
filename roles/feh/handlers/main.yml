@@ -1,0 +1,7 @@
+---
+# handlers file for feh
+
+- name: Start SSH Service
+  service:
+          name: ssh
+          state: started

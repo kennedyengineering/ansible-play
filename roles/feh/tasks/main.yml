@@ -1,0 +1,11 @@
+---
+# tasks file for feh
+- name: Install feh image viewer
+  become: yes
+  become_user: root
+  apt:
+          name: feh
+          state: present
+          update_cache: true
+  notify:
+          - Start SSH Service
