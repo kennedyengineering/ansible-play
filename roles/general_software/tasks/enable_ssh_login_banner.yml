@@ -11,3 +11,24 @@
           owner: root
           group: root
           mode: u=rw,g=r,o=r
+
+- name: enable login banner in sshd_config
+  become: yes
+  become_user: root
+  lineinfile:
+          dest: /etc/ssh/sshd_config
+          line: "Banner /etc/login.warn"
+          state: present
+
+- name: copy warning message
+  become: yes
+  become_user: root
+  copy:
+          dest: /etc/login.warn
+          src: login.warn
+          owner: root
+          group: root
+          mode: u=rw,g=r,o=r
+  notify:
+           - restart_sshd_service
+

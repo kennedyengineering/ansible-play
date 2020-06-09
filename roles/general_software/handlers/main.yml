@@ -1,2 +1,4 @@
 ---
 # handlers file for general_software
+
+- include: restart_sshd_service.yml
