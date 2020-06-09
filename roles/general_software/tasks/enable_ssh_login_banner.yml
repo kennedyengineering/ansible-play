@@ -1,0 +1,13 @@
+---
+# task file for general_software
+
+- name: copy message of the day
+  become: yes
+  become_user: root
+  copy:
+          dest: /etc/motd
+          #src: {{ role_path }}/files/motd
+          src: motd
+          owner: root
+          group: root
+          mode: u=rw,g=r,o=r

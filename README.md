@@ -28,7 +28,7 @@ feh.yml was from earlier in the tutorial
 
 # General config:
 	- SSH keys
-	- disable visual VIM
+	- disable visual VIM 	(done)
 	- login banner
 	- unlimited bash memory
 	- set timezone
