@@ -1,0 +1,30 @@
+---
+# tasks file for general_software
+
+- name: install general software
+  become: yes
+  become_user: root
+  action: >
+          {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+  with_items:
+          - vim
+          - aptitude
+          - ccze
+          - htop
+          - lolcat
+          - bash-completion
+          - autossh
+          - mtr
+          - dnsutils
+          - cmatrix
+          - speedtest-cli
+          - screen
+          - tree
+          - figlet
+          - wavemon
+          - netdiscover
+          - sqlite3
+          - iftop
+          - telnet
+          - iptables-persistent
+          - netfilter-persistent
