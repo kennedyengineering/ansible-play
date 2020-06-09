@@ -33,3 +33,5 @@ feh.yml was from earlier in the tutorial
 	- unlimited bash memory
 	- set timezone
 	- iptables for SSH
+
+ansible-playbook -i ./hosts server.yml

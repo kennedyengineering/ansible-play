@@ -2,4 +2,4 @@
 # main tasks file for general_software
 
 - include_tasks: install_general_software.yml
-
+- include_tasks: disable_visual_vim.yml

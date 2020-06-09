@@ -1,0 +1,14 @@
+---
+# tasks file for general_software
+
+#- name: create ~/.vimrc if it doesn't exist
+#  file:
+#          path: ~/.vimrc
+#          state: touch
+
+- name: disable visual vim
+  lineinfile:
+          create: true                  # create file if it does not already exist
+          dest: ~/.vimrc
+          line: "set mouse-=a"
+          state: present                # whether line should be there or not, if not add
