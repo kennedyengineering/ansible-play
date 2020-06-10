@@ -1,0 +1,12 @@
+---
+# tasks file for general_software
+
+- name: enabling unlimited bash history | editing .bashrc
+  lineinfile:
+          dest: ~/.bashrc
+          regex: '^HISTSIZE='
+          line: HISTSIZE=
+  lineinfile:
+          dest: ~/.bashrc
+          regex: '^HISTFILESIZE='
+          line: HISTFILESIZE=
