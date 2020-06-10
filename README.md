@@ -4,11 +4,12 @@ feh.yml was from earlier in the tutorial
 [link] https://serversforhackers.com/c/an-ansible2-tutorial
 
 # Things to install:
+config needed? yes/no
 	- aptitude 		(no)
 	- ccze			(no)
 	- htop			(no)
        	- lolcat		(no)
-       	- bash-completion	(config needed)
+       	- bash-completion	(no)
        	- autossh		(no)
        	- lolcat		(no)
        	- mtr			(no)
@@ -31,7 +32,7 @@ feh.yml was from earlier in the tutorial
 	- disable visual VIM 	(done)
 	- login banner		(done)
 	- unlimited bash memory (done)
-	- set timezone
+	- set timezone		(done)
 	- iptables for SSH
 
 ansible-playbook -i ./hosts server.yml -K
