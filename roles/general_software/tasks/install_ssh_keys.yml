@@ -1,0 +1,20 @@
+---
+# tasks file for general_software
+
+# should be part of a larger task to create users
+# keys are only a part of it
+# should be completely automated
+
+#- name: install ssh keys
+#  action: >
+#        authorized_key: user={{ item.name }} key= {{ item.key }}
+#  with items: ssh_users
+
+- name: set up ssh keys
+  authorized_key:
+        user: dev
+        state: present
+        key: '{{ item }}'
+  with_file:
+        - bkennedy_id_rsa.pub
+        - glawler_id_rsa.pub
