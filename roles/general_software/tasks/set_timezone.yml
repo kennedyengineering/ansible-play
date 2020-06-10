@@ -1,0 +1,10 @@
+---
+# task file for general_software
+
+# Test machine already set to america/los_angeles, errors when trying to change that
+# "Failed to set time zone: Connection timed out"
+
+- name: Set timezone to America/Los_Angeles
+  timezone:
+          name: America/Los_Angeles
+          #name: America/New_York
