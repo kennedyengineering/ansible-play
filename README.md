@@ -4,28 +4,28 @@ feh.yml was from earlier in the tutorial
 [link] https://serversforhackers.com/c/an-ansible2-tutorial
 
 # Things to install:
-config needed? yes/no
+	- is config needed? yes/no
 	- aptitude 		(no)
 	- ccze			(no)
 	- htop			(no)
-       	- lolcat		(no)
-       	- bash-completion	(no)
-       	- autossh		(no)
-       	- lolcat		(no)
-       	- mtr			(no)
-       	- dnsutils		(no)
-       	- cmatrix		(no)
-       	- speedtest-cli		(no)
-       	- screen		(no)
-       	- tree			(no)
-       	- figlet		(no)
-       	- wavemon		(no)
-       	- netdiscover		(no)
-       	- sqlite3		(no)
-       	- iftop			(no)
-       	- telnet		(no)
-       	- iptables-persistent	(no? look more at iptables)
-       	- netfilter-persistent	(no?)
+	- lolcat		(no)
+	- bash-completion	(no)
+	- autossh		(no)
+	- lolcat		(no)
+	- mtr			(no)
+	- dnsutils		(no)
+	- cmatrix		(no)
+	- speedtest-cli		(no)
+	- screen		(no)
+	- tree			(no)
+	- figlet		(no)
+	- wavemon		(no)
+	- netdiscover		(no)
+	- sqlite3		(no)
+	- iftop			(no)
+	- telnet		(no)
+	- iptables-persistent	(no? look more at iptables)
+	- netfilter-persistent	(no?)
 
 # General config:
 	- SSH keys
