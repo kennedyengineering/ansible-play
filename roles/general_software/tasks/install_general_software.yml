@@ -26,5 +26,6 @@
           - sqlite3
           - iftop
           - telnet
+          - iptables
           - iptables-persistent
           - netfilter-persistent
