@@ -1,6 +1,10 @@
 ---
 # task file for general_software
 
+# needs to improved for redundancy, use regex with lineinfile
+# copy warning message before editing the config
+# notify restart_sshd_service after editing the config --> it makes sense!!
+
 - name: copy message of the day
   become: yes
   become_user: root
