@@ -28,11 +28,11 @@ feh.yml was from earlier in the tutorial
 	- netfilter-persistent	(no?)
 
 # General config:
-	- SSH keys
+	- SSH keys		()
 	- disable visual VIM 	(done)
 	- login banner		(done)
 	- unlimited bash memory (done)
 	- set timezone		(done)
-	- iptables for SSH
+	- iptables for SSH	(done)
 
 ansible-playbook -i ./hosts server.yml -K
