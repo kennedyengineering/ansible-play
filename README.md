@@ -28,7 +28,7 @@ feh.yml was from earlier in the tutorial
 	- netfilter-persistent	(no?)
 
 # General config:
-	- SSH keys		()
+	- SSH keys		(done)
 	- disable visual VIM 	(done)
 	- login banner		(done)
 	- unlimited bash memory (done)
@@ -36,3 +36,5 @@ feh.yml was from earlier in the tutorial
 	- iptables for SSH	(done)
 
 ansible-playbook -i ./hosts server.yml -K
+
+optional: if not ssh keyed use --ask-pass
