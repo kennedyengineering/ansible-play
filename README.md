@@ -30,8 +30,8 @@ feh.yml was from earlier in the tutorial
 	- SSH keys
 	- disable visual VIM 	(done)
 	- login banner		(done)
-	- unlimited bash memory
+	- unlimited bash memory (done)
 	- set timezone
 	- iptables for SSH
 
-ansible-playbook -i ./hosts server.yml
+ansible-playbook -i ./hosts server.yml -K
