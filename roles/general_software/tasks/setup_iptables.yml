@@ -12,3 +12,13 @@
         syn: match
         jump: ACCEPT
         comment: Accept new SSH connections.
+
+- name: iptables | save configuration to /etc/iptables/rules.v4
+  become: yes
+  become_user: root
+  shell: iptables-save > /etc/iptables/rules.v4
+
+- name: iptables | save configuration to /etc/iptables/rules.v6
+  become: yes
+  become_user: root
+  shell: ip6tables-save > /etc/iptables/rules.v6
