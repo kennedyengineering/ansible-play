@@ -1,0 +1,7 @@
+---
+# handlers file for general_software
+
+- name: iptables | save configuration to /etc/iptables/rules.v4
+  become: yes
+  become_user: root
+  shell: iptables-save > /etc/iptables/rules.v4

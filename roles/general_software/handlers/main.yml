@@ -2,3 +2,5 @@
 # handlers file for general_software
 
 - include: restart_sshd_service.yml
+- include: iptables_save_v4.yml
+- include: iptables_save_v6.yml
