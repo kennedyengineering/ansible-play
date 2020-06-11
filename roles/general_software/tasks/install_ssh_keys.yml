@@ -12,7 +12,7 @@
 
 - name: set up ssh keys
   authorized_key:
-        user: dev
+        user: '{{ ansible_user_id }}'
         state: present
         key: '{{ item }}'
   with_file:
