@@ -1,3 +1,3 @@
 - hosts: remote
   roles:
-          - general_software 
+          - general_software

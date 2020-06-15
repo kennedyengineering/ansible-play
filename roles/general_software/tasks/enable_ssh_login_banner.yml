@@ -7,7 +7,7 @@
 
 - name: copy message of the day
   become: yes
-  become_user: root
+  become_method: sudo
   copy:
           dest: /etc/motd
           #src: {{ role_path }}/files/motd
@@ -18,7 +18,7 @@
 
 - name: enable login banner in sshd_config
   become: yes
-  become_user: root
+  become_method: sudo
   lineinfile:
           dest: /etc/ssh/sshd_config
           line: "Banner /etc/login.warn"
@@ -26,7 +26,7 @@
 
 - name: copy warning message
   become: yes
-  become_user: root
+  become_method: sudo
   copy:
           dest: /etc/login.warn
           src: login.warn
@@ -34,5 +34,5 @@
           group: root
           mode: u=rw,g=r,o=r
   notify:
-           - restart_sshd_service.yml
+           - restart_sshd_service
 

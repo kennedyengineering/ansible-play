@@ -1,0 +1,39 @@
+---
+# tasks file for bootstrap
+# Credit to O.O. common task bitbucket https://bitbucket.org/outsideopen/ops/src/master/roles/common/bootstrap/tasks/main.yml
+
+#- include: "os/{{ ansible_os_family }}.yml" # for any special instructions
+
+- name: Make sure admin group exists
+  become: yes
+  become_user: root
+  group:
+          name: admin
+          state: present
+
+- name: Create ansible user
+  become: yes
+  become_user: root
+  user:
+          name: ansible
+          comment: "Ansible Ops Management"
+          group: admin
+          state: present
+
+- name: Install ansible SSH key
+  become: yes
+  become_user: root
+  authorized_key:
+          user: ansible
+          state: present
+          key: "{{ lookup('file', bootstrap_ops_pubkey) }}"
+          manage_dir: yes
+
+- name: Allow passwordless sudo for ansible user
+  become: yes
+  become_user: root
+  copy:
+          mode: "0644"
+          content: "Defaults:ansible !requiretty\nansible ALL=(ALL) NOPASSWD: ALL"
+          dest: "{{ bootstrap_sudoersd_path }}/sudoers.d/ansible"
+

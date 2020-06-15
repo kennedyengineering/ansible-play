@@ -3,5 +3,5 @@
 
 - name: iptables | save configuration to /etc/iptables/rules.v4
   become: yes
-  become_user: root
+  become_method: sudo
   shell: iptables-save > /etc/iptables/rules.v4

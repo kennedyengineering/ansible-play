@@ -1,0 +1,5 @@
+---
+# defaults file for bootstrap
+
+bootstrap_sudoersd_path: "/etc"
+bootstrap_ops_pubkey: ../../files/ssh_keys/bootstrap_ops_key.pub

@@ -3,7 +3,7 @@
 
 - name: iptables | Allow new incoming SYN packets on TCP port 22 (SSH)
   become: yes
-  become_user: root
+  become_method: sudo
   iptables:
         chain: INPUT
         protocol: tcp
