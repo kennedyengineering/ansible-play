@@ -1,13 +1,20 @@
 [local]
 127.0.0.1
 
+[testpi]
+#dev-ansibletestingpi.local	ansible_user=pi
+10.42.1.117	ansible_user=pi
+
 [remote_bootstrap]
 dev-jtnano	ansible_user=dev
 10.10.1.154	ansible_user=root
 
 [remote]
-dev-jtnano	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
-10.10.1.154	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
+#dev-jtnano	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
+#10.10.1.154	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
+#10.42.1.117	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
+
+10.42.1.117
 
 #[remote:vars]
 #ansible_user = ansible

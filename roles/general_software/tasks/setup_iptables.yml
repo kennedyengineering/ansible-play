@@ -13,5 +13,5 @@
         jump: ACCEPT
         comment: Accept new SSH connections.
   notify:
-          - iptables_save_v4
+          - iptables | save configuration to /etc/iptables/rules.v4
 

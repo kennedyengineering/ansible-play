@@ -4,7 +4,23 @@
 # Test machine already set to america/los_angeles, errors when trying to change that
 # "Failed to set time zone: Connection timed out"
 
+#- name: Set timezone to America/Los_Angeles
+#  timezone:
+#          name: America/Los_Angeles
+#          #name: America/New_York
+
 - name: Set timezone to America/Los_Angeles
-  timezone:
-          name: America/Los_Angeles
-          #name: America/New_York
+  become: yes
+  become_user: root
+  #copy: content="America/Los_Angeles\n" dest=/etc/timezone owner=root group=root mode=0644
+  lineinfile:
+          path: /etc/timezone
+          regexp: '.*'  # delete everything, shouldn't have to has to be a better regex way
+          state: absent
+  lineinfile:
+          path: /etc/timezone
+          line: "America/Los_Angeles"
+          state: present
+
+
+ # HAS to be a better way, also need to either restart or manage services to prevent change in timezone from messing with tim sensitive programs
