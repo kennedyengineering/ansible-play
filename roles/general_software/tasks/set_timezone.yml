@@ -13,10 +13,18 @@
   become: yes
   become_user: root
   #copy: content="America/Los_Angeles\n" dest=/etc/timezone owner=root group=root mode=0644
+  #lineinfile:
+  #        path: /etc/timezone
+  #        regexp: '.*'  # delete everything, shouldn't have to has to be a better regex way
+  #        state: absent
   lineinfile:
           path: /etc/timezone
-          regexp: '.*'  # delete everything, shouldn't have to has to be a better regex way
+          regexp: "^(?!.*(America/Los_Angeles))"
           state: absent
+
+- name: Check if timezone is correct
+  become: yes
+  become_user: root
   lineinfile:
           path: /etc/timezone
           line: "America/Los_Angeles"
