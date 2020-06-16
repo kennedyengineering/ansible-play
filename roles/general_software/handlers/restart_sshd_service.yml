@@ -1,3 +1,10 @@
+#- name: restart sshd service
+#       service: name=sshd state=restarted   # fails on raspberry pi
+#       service: name=ssh state=restarted     # does the same thing, still fails
+
+# other people were having the same issue, this is the suggested fix
 - name: restart sshd service
-  #service: name=sshd state=restarted   # fails on raspberry pi
-  service: name=ssh state=restarted     # does the same thing, still fails
+  #shell: sleep 3; /etc/init.d/sshd restart
+  shell: sleep 3; /etc/init.d/ssh restart       # sshd file renamed to ssh for some reason
+  async: 1
+  poll: 0
