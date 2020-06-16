@@ -1,0 +1,3 @@
+testpi:
+        vars:
+                ansible_user: pi
