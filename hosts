@@ -8,12 +8,15 @@
 [remote_bootstrap]
 dev-jtnano	ansible_user=dev
 10.10.1.154	ansible_user=root
+10.42.1.117	ansible_user=pi
 
 [remote]
 #dev-jtnano	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
 #10.10.1.154	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
 #10.42.1.117	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
-10.42.1.117
+dev-jtnano	ansible_user=ansible	# need to specify here for ansible to not try logging in as different user
+10.10.1.154	ansible_user=ansible
+10.42.1.117	ansible_user=ansible
 
 #[remote:vars]
 #ansible_user = ansible
