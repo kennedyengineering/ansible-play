@@ -1,23 +1,22 @@
+localhost 		ansible_ssh_host=127.0.0.1
+jetson_nano		ansible_ssh_host=dev-jtnano
+kali_raspberrypi	ansible_ssh_host=10.10.1.154 
+testing_raspberrypi 	ansible_ssh_host=10.42.1.117
+
+# need to specify ansible_user for ansible to not try logging in as different user, important for the difference in the bootstrapping routing and the actual install routine
+
 [local]
-127.0.0.1
+localhost
 
 [testpi]
-#dev-ansibletestingpi.local	ansible_user=pi
-10.42.1.117	ansible_user=pi
+testing_raspberrypi 	ansible_user=pi
 
 [remote_bootstrap]
-dev-jtnano	ansible_user=dev
-10.10.1.154	ansible_user=root
-10.42.1.117	ansible_user=pi
+jetson_nano		ansible_user=dev
+kali_raspberrypi	ansible_user=root
+testing_raspberrypi	ansible_user=pi
 
 [remote]
-#dev-jtnano	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
-#10.10.1.154	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
-#10.42.1.117	ansible_user=ansible	ansible_ssh_private_key_file="files/ssh_keys/bootstrap_ops_key"
-dev-jtnano	ansible_user=ansible	# need to specify here for ansible to not try logging in as different user
-10.10.1.154	ansible_user=ansible
-10.42.1.117	ansible_user=ansible
-
-#[remote:vars]
-#ansible_user = ansible
-#ansible_ssh_private_key_file = "files/ssh_keys/bootstrap_ops_key"
+jetson_nano		ansible_user=ansible	
+kali_raspberrypi	ansible_user=ansible
+testing_raspberrypi	ansible_user=ansible
