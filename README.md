@@ -38,3 +38,7 @@ feh.yml was from earlier in the tutorial
 ansible-playbook -i ./hosts server.yml -K
 
 optional: if not ssh keyed use --ask-pass
+
+
+new command with environments:
+ansible-playbook -i environments/remote_deployment server.yml

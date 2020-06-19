@@ -1,5 +1,2 @@
----
-# group vars for remote host group
-
 ansible_user: ansible
 ansible_ssh_private_key_file: "files/ssh_keys/bootstrap_ops_key"

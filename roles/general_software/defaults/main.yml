@@ -1,4 +1,4 @@
 ---
 # defaults file for general_software
 
-pubic_ssh_key_dir: ../../files/ssh_keys/public_keys
+public_ssh_key_dir: ../../files/ssh_keys/public_keys

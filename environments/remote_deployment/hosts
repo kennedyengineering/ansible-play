@@ -1,0 +1,9 @@
+# remote_deployment inventory file
+jetson_nano            ansible_ssh_host=dev-jtnano
+kali_raspberrypi       ansible_ssh_host=10.10.1.154 
+testing_raspberrypi    ansible_ssh_host=10.42.1.117
+
+[deployment]
+jetson_nano
+kali_raspberrypi
+testing_raspberrypi
