@@ -16,4 +16,5 @@
         state: present
         key: "{{ lookup('file', item) }}"
   with_fileglob:
-        - public_keys/*.pub
+          #- public_keys/*.pub
+          - '{{ public_ssh_key_dir }}/*.pub'
