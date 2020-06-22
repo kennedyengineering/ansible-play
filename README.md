@@ -42,3 +42,8 @@ optional: if not ssh keyed use --ask-pass
 
 new command with environments:
 ansible-playbook -i environments/remote_deployment server.yml
+
+
+according the ansible documentation, playbooks should not be put into their own folder and should be kept on the top level of the directory
+
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#content-organization
