@@ -5,7 +5,7 @@
   become: yes
   action: >
           {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
-  with_items:
+  with_items: # turn into list/file that can be easily modified and added to?
           - vim
           - aptitude
           - ccze

@@ -6,17 +6,11 @@ An example role for educational use. Should not be used in a professional enviro
 Requirements
 ------------
 
-Brains. 
-
 Role Variables
 --------------
 
-Need to make use of more variables :/
-
 Dependencies
 ------------
-
-Nah, its pretty basic
 
 Example Playbook
 ----------------
@@ -28,7 +22,7 @@ Example Playbook
 License
 -------
 
-Beer me license
+Beer
 
 Author Information
 ------------------
