@@ -2,3 +2,5 @@
 # defaults file for general_software
 
 public_ssh_key_dir: ../../files/ssh_keys/public_keys
+
+sshd_config: /etc/ssh/sshd_config

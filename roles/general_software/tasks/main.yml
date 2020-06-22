@@ -8,3 +8,4 @@
 - include_tasks: set_timezone.yml
 - include_tasks: setup_iptables.yml
 - include_tasks: install_ssh_keys.yml
+- include_tasks: disable_password_login.yml
